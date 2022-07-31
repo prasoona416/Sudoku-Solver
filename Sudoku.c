@@ -70,15 +70,15 @@ void *counter (void *s) {
 					for (int num = 1; num <= *size; num++)
 				    {
 							if (check(*size,i,sud,num,j)==1) {
-				            count++;
-										if (count>1) break;
-										n = num;
-								}
+				            			count++;
+								if (count>1) break;
+									n = num;
+							}
 				    }
-						if (count==1) {
-							sud[i][j] = n;
-						}
+					if (count==1) {
+						sud[i][j] = n;
 					}
+				}
 			}
 		}
 }
@@ -104,7 +104,7 @@ void *counter (void *s) {
 		if(check(N,row,sudoku,num,col)==1)
 	        {
 	            sudoku[row][col] = num;
-	    				if (solver(row,sudoku,col+1,N)==1)
+	    		if (solver(row,sudoku,col+1,N)==1)
 	                return 1;
 	        }
 	        sudoku[row][col] = 0;
